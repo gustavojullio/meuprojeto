@@ -1,0 +1,37 @@
+
+extends layout
+
+block content
+  a-scene(cursor='rayOrigin: mouse' raycaster="objects: .raycastable" inspector-plugin-recast)
+    a-camera(position='1 1.8 -3')
+
+    a-asset-item(id ='cenario' src='../models/sala/scene.gltf')
+    a-entity(gltf-model = '#cenario')
+
+    a-asset-item(id ='funcionaria' src='../models/funcionaria-museu/scene.gltf')
+    a-entity(gltf-model = '#funcionaria' position='-5.588 0.521 1.704' rotation='-0.028 118.206 -1.537' class='raycastable' mycomponent)
+
+    a-entity(sound="src: url(../audios/boas-vindas-sala.mp3); on: click; volume: 10", id="audio")
+
+    a-asset-item(id='mercurio' src='../models/mercurio/scene.gltf')
+    a-entity(gltf-model='#mercurio' position='-0.385 2.106 -4.881' rotation='-0.028 24.069 -1.537' scale='0.005 0.005 0.005' class='raycastable' componente-mercurio)
+
+    a-entity(id='infoTextWrapper', class='invisivel')
+      a-plane(position="0.676 2.919 -5.184" width="2" height="1.5" material="color: black; opacity: 0.8;" visible="false")
+      a-text(value='Cena retratando o instante antes do assassinato de Argos por Mercurio, uma figura mitologica com cem olhos, encomendada por Zeus para libertar-lo.' align="center" position="0.676 2.919 -5.184" width="1.8" wrap-count="25" visible="false")
+
+    a-asset-item(id ='liberdade' src='../models/liberdade/scene.gltf')
+    a-entity(gltf-model ='#liberdade' position='2.010 0.406 1.144'  rotation='0 -140.301 0' scale='0.04 0.04 0.04' class='raycastable' componente-liberdade)
+
+    a-entity(id='infoTextWrapperLiberdade', class='invisivel')
+      a-plane(position="2.967 2.655 -0.303" rotation='-1.044 -115.971 1.533' width="2" height="1.5" material="color: black; opacity: 0.8;" visible="false")
+      a-text(value='A Estatua da Liberdade e uma colossal escultura neoclassica na Ilha da Liberdade no Porto de Nova Iorque nos Estados Unidos. Foi um presente da Franca para os Estados Unidos e e um simbolo de liberdade e democracia. A estatua foi inaugurada em 28 de outubro de 1886.' align="center" position="2.967 2.655 -0.303" rotation='-1.044 -115.971 1.533' width="1.8" wrap-count="25" visible="false")
+
+    a-asset-item(id ='pesquisador1' src='../models/pesquisador-teste/source/Joe_01.glb')
+    a-entity(gltf-model = '#pesquisador1' position='-1.472 1.324 0.315' rotation='-0.028 118.206 -1.537' scale='3 3 3')
+
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+  
+
+
+
