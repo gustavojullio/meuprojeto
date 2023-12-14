@@ -13,7 +13,10 @@ Para começar, siga estas etapas:
 
 Execute o seguinte comando para instalar as dependências:
 
-
 ```bash
 npm install
+
+Para iniciar o servidor, utilize o seguinte comando:
+
+```bash
 npm start
