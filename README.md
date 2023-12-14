@@ -18,5 +18,4 @@ npm install
 
 Para iniciar o servidor, utilize o seguinte comando:
 
-```bash
 npm start
