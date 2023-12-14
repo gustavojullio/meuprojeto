@@ -16,5 +16,4 @@ Execute o seguinte comando para instalar as dependências:
 ```bash
 npm install
 
-```bash
 npm start
